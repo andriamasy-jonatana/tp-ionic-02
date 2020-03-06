@@ -1,4 +1,5 @@
 # Andriamasy Jonatana
+![Angular CI](https://github.com/andriamasy-jonatana/tp-ionic-02/workflows/Angular%20CI/badge.svg)
 ## TP IONIC
 
 ###### From ionic blank starter
