@@ -2,7 +2,7 @@ ion-content {
   width: 400px;
 
   > ion-item {
-    margin-bottom: 50px;
+    margin-bottom: 5px;
 
     > ion-label {
       color: blue;
@@ -12,3 +12,21 @@ ion-content {
     }
   }
 }
+
+/*
+ion-content {
+  width: 400px;
+
+  > ion-item {
+    margin-bottom: 5px;
+
+    > ion-label {
+      color: blue;
+      &.color-red {
+        color: red;
+      }
+    }
+  }
+}
+*/
+

@@ -4,17 +4,17 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="flexbox">
   <ion-item>
     <ion-label class="color-red" position="floating">Identifiant</ion-label>
-    <ion-input></ion-input>
+    <ion-input [(ngModel)]="id"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label position="floating">Mot de Passe</ion-label>
-    <ion-input type="password"></ion-input>
+    <ion-input type="password" [(ngModel)]="mdp"></ion-input>
   </ion-item>
   <div class="ion-padding">
-    <ion-button expand="block" type="submit" class="ion-no-margin">Connexion</ion-button>
+    <ion-button expand="block" type="submit" class="ion-no-margin" (click)="login()" [disabled]="mdp.length < 3 || id.length < 3">Connexion</ion-button>
   </div>
 </ion-content>
