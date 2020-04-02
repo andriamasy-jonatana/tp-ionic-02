@@ -24,8 +24,9 @@ export class LoginPage implements OnInit {
     login() {
         this.loading = true;
         this.error = null;
+
         this.loginService.login(this.id, this.nom, this.mdp)
-            .subscribe(users => this.user = users,
+            .subscribe(user => this.user = user,
                 error => {
                     this.loading = false;
                     this.error = error;

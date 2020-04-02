@@ -1,9 +1,28 @@
 import { TestBed } from '@angular/core/testing';
 
 import { LoginService } from './login.service';
+import { HttpClientModule } from '@angular/common/http';
+import {HttpTestingController} from '@angular/common/http/testing';
+import User from './models/User';
 
 describe('LoginService', () => {
-  beforeEach(() => TestBed.configureTestingModule({}));
+  let httpTestingController: HttpTestingController;
+  const mockData = [
+    {
+      id: '1',
+      name: 'Le nom de Bret',
+      username: 'Bret',
+      email: 'Sincere@april.biz'
+    }
+  ];
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      imports: [HttpTestingController]
+    });
+
+    httpTestingController = TestBed.get(HttpTestingController);
+  });
 
   it('should be created', () => {
     const service: LoginService = TestBed.get(LoginService);
@@ -12,7 +31,28 @@ describe('LoginService', () => {
 
   it('login', () => {
     const service: LoginService = TestBed.get(LoginService);
-    const user = service.login('MonId', 'replop')
-    expect(user.id).toBe('MonId');
+    const idTest = 'Plop';
+    let userReturned: User;
+
+    service.login(idTest, 'replop', 'pwd')
+        .subscribe(user => {
+          userReturned = user;
+        });
+
+    // attente de la requete
+    const req = httpTestingController.expectOne('https://jsonplaceholder.typicode.com/users?username=' + idTest);
+    // reponse a la requete
+    req.flush(mockData);
+    // verification que toutes les requetes soient terminees
+    httpTestingController.verify();
+
+    expect(userReturned.nom).toBe(mockData[0].name);
+    expect(userReturned.id).toBe(mockData[0].id);
+    expect(userReturned.email).toBe(mockData[0].email);
+
+    /*const user = service.login('MonId', 'replop', 'rereplop')
+        .subscribe(value => {
+          // expect(user.nom).toBe(nomReturnd)
+        });*/
   });
 });
