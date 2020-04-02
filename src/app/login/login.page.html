@@ -19,5 +19,5 @@
   </div>
   <span *ngIf="error">Une erreur est survenue : {{ error }}</span>
   <span *ngIf="loading">Chargement en cours...</span>
-  <span *ngIf="user && !loading">Bienvenue {{ user.nom }}</span>
+  <span *ngIf="user && !loading && !error">Bienvenue {{ user.nom }}</span>
 </ion-content>
