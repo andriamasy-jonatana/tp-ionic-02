@@ -4,7 +4,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="flexbox">
+<ion-content>
   <ion-item>
     <ion-label class="color-red" position="floating">Identifiant</ion-label>
     <ion-input [(ngModel)]="id"></ion-input>
@@ -17,4 +17,6 @@
   <div class="ion-padding">
     <ion-button expand="block" type="submit" class="ion-no-margin" (click)="login()" [disabled]="mdp.length < 3 || id.length < 3">Connexion</ion-button>
   </div>
+  <span *ngIf="loading">Chargement en cours...</span>
+  <span *ngIf="user && !loading">Bienvenue {{ user.name }}</span>
 </ion-content>
