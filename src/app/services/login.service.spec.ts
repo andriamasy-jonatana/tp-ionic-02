@@ -1,8 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 
 import { LoginService } from './login.service';
-import { HttpClientModule } from '@angular/common/http';
-import {HttpTestingController} from '@angular/common/http/testing';
+import {HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing';
 import User from './models/User';
 
 describe('LoginService', () => {
@@ -18,7 +17,7 @@ describe('LoginService', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [HttpTestingController]
+      imports: [HttpClientTestingModule]
     });
 
     httpTestingController = TestBed.get(HttpTestingController);

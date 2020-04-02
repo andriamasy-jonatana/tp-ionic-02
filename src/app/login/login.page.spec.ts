@@ -4,8 +4,7 @@ import { IonicModule } from '@ionic/angular';
 import { LoginPage } from './login.page';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
-import {HttpTestingController} from '@angular/common/http/testing';
+import {HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing';
 import {LoginService} from '../services/login.service';
 
 describe('LoginPage', () => {
@@ -25,7 +24,7 @@ describe('LoginPage', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ LoginPage ],
-      imports: [IonicModule.forRoot(), CommonModule, FormsModule, HttpTestingController],
+      imports: [IonicModule.forRoot(), CommonModule, FormsModule, HttpClientTestingModule],
       providers: [LoginService]
     }).compileComponents();
 

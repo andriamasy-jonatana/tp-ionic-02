@@ -18,5 +18,6 @@
     - [Using Observable and Pipe Operator](https://www.learnrxjs.io/) :white_check_mark:
           
 - Ionic:
-    - [Ionic UI Components](https://ionicframework.com/docs/components)
+    - [Ionic UI Components](https://ionicframework.com/docs/components) :white_check_mark:
+    - [Ionic Native](https://ionicframework.com/docs/native) *onglet Community*
     - Android local Build
