@@ -16,7 +16,7 @@ export class HomePage {
 
   updateTitle() {
     this.title = 'Un nouveau titre';
-    this.user = this.loginService.login('identification', 'P@ssw0rd');
+    // this.user = this.loginService.login('identification', 'name', 'P@ssw0rd');
     console.log(this.user);
   }
 
