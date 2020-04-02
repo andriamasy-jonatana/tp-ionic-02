@@ -6,15 +6,15 @@
 
 #### Notation
 
-- CI: white_check_mark:
-    - Builds: white_check_mark
-    - Units tests: white_check_mark
-    - Readme with Github Actions Badges: white_check_mark
+- CI:
+    - Builds :white_check_mark:
+    - Units tests :white_check_mark:
+    - Readme with Github Actions Badges :white_check_mark:
 
 
 - Angular:
-    - Http Get Request: white_check_mark
-    - Using Observable and Pipe Operator: white_check_mark
+    - Http Get Request :white_check_mark:
+    - Using Observable and Pipe Operator :white_check_mark:
     - Units Tests with HttpClientTestingModule
     
 - Ionic:
