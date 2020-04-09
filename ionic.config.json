@@ -1,5 +1,7 @@
 {
   "name": "tp_webmobile_blank",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

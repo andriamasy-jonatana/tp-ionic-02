@@ -11,7 +11,6 @@
     - Units tests :white_check_mark:
     - Readme with Github Actions Badges :white_check_mark:
 
-
 - Angular:
     - [Http Get Request](https://angular.io/guide/http) :white_check_mark:
     - Units Tests with HttpClientTestingModule
