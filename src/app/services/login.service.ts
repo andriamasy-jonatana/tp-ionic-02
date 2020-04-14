@@ -5,9 +5,8 @@ import iUser from './models/iUser';
 import { Observable } from 'rxjs';
 import {filter, map, tap} from 'rxjs/operators';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
+
 export class LoginService {
 
   constructor(private http: HttpClient) { }
