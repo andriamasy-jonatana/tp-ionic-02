@@ -3,6 +3,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { HomePage } from './home.page';
 import { Camera } from '@ionic-native/camera/ngx';
+import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { RouterTestingModule } from '@angular/router/testing';
 
 describe('HomePage', () => {
@@ -13,7 +14,7 @@ describe('HomePage', () => {
     TestBed.configureTestingModule({
       declarations: [ HomePage ],
       imports: [IonicModule.forRoot(), RouterTestingModule],
-      providers: [Camera]
+      providers: [Camera, Geolocation]
     }).compileComponents();
 
     fixture = TestBed.createComponent(HomePage);
@@ -27,7 +28,7 @@ describe('HomePage', () => {
   });
 
   it('change title', () => {
-    component.title = 'Mon Titre'
+    component.title = 'Mon Titre';
     expect(component.title).toBe('Mon Titre');
   });
 
