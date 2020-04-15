@@ -13,7 +13,8 @@ export class HomePage {
 
   title: string;
   imgData: string;
-  coordsData: string;
+  coordsDataLat: number;
+  coordsDataLng: number;
 
   constructor(private alertController: AlertController, private camera: Camera, private geolocation: Geolocation) {}
 
@@ -60,7 +61,8 @@ export class HomePage {
     this.geolocation.getCurrentPosition().then((resp) => {
       // resp.coords.latitude;
       // resp.coords.longitude;
-      this.coordsData = 'Lat: ' + resp.coords.latitude + ' <br>' + 'Lng: ' + resp.coords.longitude;
+      this.coordsDataLat = resp.coords.latitude;
+      this.coordsDataLng = resp.coords.longitude;
     }).catch((error) => {
       console.log('Error getting location', error);
     });

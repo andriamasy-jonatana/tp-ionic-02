@@ -50,3 +50,9 @@ ion-content ion-toolbar {
 ion-content ion-toolbar {
   --background: translucent;
 }
+
+ion-col > div {
+  background-color: #f7f7f7;
+  border: solid 1px #ddd;
+  padding: 10px;
+}
