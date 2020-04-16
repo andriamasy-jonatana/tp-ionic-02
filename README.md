@@ -22,6 +22,7 @@
     - [Ionic Native](https://ionicframework.com/docs/native) *onglet Community* :white_check_mark:
         - Camera *fait en cours*
         - travail en autonomie :
+            - Régler le problème de CI *à faire*
             - Geolocation *fait mais à améliorer*
             - Affichage d'une notification sur le clic d'un bouton *fait* :white_check_mark:
             - Affichage d'une preview de la caméra dans une NOUVELLE page *fait* :white_check_mark:
