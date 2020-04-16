@@ -16,11 +16,12 @@ export class HomePage {
   coordsDataLat: number;
   coordsDataLng: number;
 
-  constructor(private alertController: AlertController, private camera: Camera, private geolocation: Geolocation) {}
+  constructor(private alertController: AlertController,
+              private camera: Camera,
+              private geolocation: Geolocation) {}
 
   updateTitle() {
     this.title = 'Un nouveau titre';
-    // this.user = this.loginService.login('identification', 'name', 'P@ssw0rd');
   }
 
   async fireAlert() {
@@ -48,28 +49,19 @@ export class HomePage {
     };
 
     this.camera.getPicture(options).then((imageData) => {
-      // imageData is either a base64 encoded string or a file URI
-      // If it's base64 (DATA_URL):
         console.log(imageData);
         this.imgData = 'data:image/jpeg;base64,' + imageData;
-    }, (err) => {
-      // Handle error
+    }, (error) => {
+      console.log('Error camera', error);
     });
   }
 
   getGeolocation() {
     this.geolocation.getCurrentPosition().then((resp) => {
-      // resp.coords.latitude;
-      // resp.coords.longitude;
       this.coordsDataLat = resp.coords.latitude;
       this.coordsDataLng = resp.coords.longitude;
     }).catch((error) => {
       console.log('Error getting location', error);
     });
   }
-
-  /*maNouvelleMethodeQuiNeSeraPasTeste() {
-    this.title = 'Mon nouveau titre';
-  }*/
-
 }

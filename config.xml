@@ -48,7 +48,7 @@
     </platform>
     <platform name="ios">
         <config-file parent="NSCameraUsageDescription" platform="ios" target="*-Info.plist">
-            <string>You can take photos</string>
+            <string>L'application a besoin de l'appareil photo car on s'amuse avec</string>
         </config-file>
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
