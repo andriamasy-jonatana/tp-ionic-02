@@ -6,6 +6,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import {HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing';
 import {LoginService} from '../services/login.service';
+import {CamerapreviewPage} from '../camerapreview/camerapreview.page';
+import {RouterTestingModule} from '@angular/router/testing';
 
 describe('LoginPage', () => {
   let component: LoginPage;
@@ -24,7 +26,7 @@ describe('LoginPage', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ LoginPage ],
-      imports: [IonicModule.forRoot(), CommonModule, FormsModule, HttpClientTestingModule],
+      imports: [IonicModule.forRoot(), CommonModule, FormsModule, HttpClientTestingModule, RouterTestingModule],
       providers: [LoginService]
     }).compileComponents();
 
@@ -36,7 +38,7 @@ describe('LoginPage', () => {
   }));
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(component).toBeDefined();
   });
 
   it('Login', () => {

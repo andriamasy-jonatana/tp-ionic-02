@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {AlertController} from '@ionic/angular';
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
+import { LocalNotifications } from '@ionic-native/local-notifications/ngx';
 
 
 @Component({
@@ -18,7 +19,8 @@ export class HomePage {
 
   constructor(private alertController: AlertController,
               private camera: Camera,
-              private geolocation: Geolocation) {}
+              private geolocation: Geolocation,
+              private localNotifications: LocalNotifications) {}
 
   updateTitle() {
     this.title = 'Un nouveau titre';
@@ -62,6 +64,16 @@ export class HomePage {
       this.coordsDataLng = resp.coords.longitude;
     }).catch((error) => {
       console.log('Error getting location', error);
+    });
+  }
+
+  showNotification() {
+    // Schedule a single notification
+    this.localNotifications.schedule({
+      id: 1,
+      text: 'Single ILocalNotification',
+      foreground: true,
+      sound: 'file://sound.mp3'
     });
   }
 }
