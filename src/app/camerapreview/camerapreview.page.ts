@@ -17,7 +17,7 @@ export class CamerapreviewPage implements OnInit {
       x: 0,
       y: 100,
       width: window.screen.width,
-      height: window.screen.height - 200,
+      height: window.screen.height - 300,
       camera: 'back',
       tapPhoto: true,
       previewDrag: true,
