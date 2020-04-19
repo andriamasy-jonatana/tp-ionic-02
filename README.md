@@ -23,9 +23,10 @@
         - Camera *fait en cours*
         - travail en autonomie :
             - Régler le problème de CI *fait* :white_check_mark:
-            - Geolocation *fait mais à améliorer*
+            - Geolocation *fait* :white_check_mark:
             - Affichage d'une notification sur le clic d'un bouton *fait* :white_check_mark:
             - Affichage d'une preview de la caméra dans une NOUVELLE page *fait* :white_check_mark:
+            - Ajout d'un tabs pour naviguer *fait* :white_check_mark:
     - Android local Build :white_check_mark:
 
 #### Scripts pour build Android
